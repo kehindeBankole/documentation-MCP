@@ -30,7 +30,10 @@
     "enabled": true
   },
   "vars": {
-    "API_HOST": "example.com"
+    "API_HOST": "http://localhost:62158"
+  },
+  "limits": {
+    "cpu_ms": 300000
   }
   /**
    * Smart Placement

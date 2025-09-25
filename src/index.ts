@@ -11,7 +11,7 @@ export class MyMCP extends McpAgent {
   env = "";
   constructor(ctx: AgentContext, env: Env) {
     super(ctx, env);
-	this.env = env.API_HOST;
+    this.env = env.API_HOST;
   }
   server = new McpServer({
     name: "Documentation Content Server",
@@ -19,7 +19,6 @@ export class MyMCP extends McpAgent {
   });
 
   async init() {
-
     this.server.tool(
       "get_documentation_content",
       {
@@ -32,9 +31,7 @@ export class MyMCP extends McpAgent {
       },
       async ({ url }) => {
         try {
-          const docUrl = `${this.env}/?url=${encodeURIComponent(
-            url
-          )}`;
+          const docUrl = `${this.env}/?url=${encodeURIComponent(url)}`;
 
           const response = await fetch(docUrl);
 
